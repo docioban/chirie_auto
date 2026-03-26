@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Blue Colors -->
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorPrimaryLight">#1E88E5</color>
+    <color name="colorPrimaryVariant">#003c8f</color>
+
+    <!-- Accent / Secondary Color -->
+    <color name="colorAccent">#FF6D00</color>
+    <color name="colorAccentDark">#E65100</color>
+    <color name="colorAccentLight">#FF9E40</color>
+
+    <!-- Background Colors -->
+    <color name="background_color">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="surface_color">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="available_color">#2E7D32</color>
+    <color name="not_available_color">#C62828</color>
+    <color name="active_color">#1565C0</color>
+    <color name="completed_color">#558B2F</color>
+
+    <!-- UI Element Colors -->
+    <color name="divider_color">#E0E0E0</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="icon_background">#E3F2FD</color>
+    <color name="star_color">#FFA000</color>
+    <color name="ripple_color">#1A1565C0</color>
+
+    <!-- Shadow / Elevation -->
+    <color name="shadow_color">#33000000</color>
+
+    <!-- Toolbar -->
+    <color name="toolbar_text">#FFFFFF</color>
+    <color name="toolbar_icons">#FFFFFF</color>
+</resources>

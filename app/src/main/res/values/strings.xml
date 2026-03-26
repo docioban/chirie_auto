@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Inchirieri Masini</string>
+    <string name="app_logo">Logo aplicatie</string>
+    <string name="main_subtitle">Gaseste masina perfecta pentru tine</string>
+
+    <!-- Activity Titles -->
+    <string name="add_car">Adauga masina</string>
+    <string name="edit_car">Editeaza masina</string>
+    <string name="car_details">Detalii masina</string>
+    <string name="rent_car">Inchiriaza masina</string>
+    <string name="rentals">Inchirieri active</string>
+    <string name="update_car">Actualizeaza masina</string>
+    <string name="save_car">Salveaza masina</string>
+
+    <!-- Main Activity -->
+    <string name="search_hint">Cauta masina (marca, model...)</string>
+    <string name="no_cars_found">Nu au fost gasite masini.\nApasa + pentru a adauga una!</string>
+    <string name="menu_view_rentals">Inchirieri</string>
+    <string name="menu_search">Cautare</string>
+    <string name="menu_about">Despre aplicatie</string>
+    <string name="about_title">Despre Inchirieri Masini</string>
+    <string name="about_message">Aplicatie pentru gestionarea inchirierilor de masini.\nVersiune 1.0\nDezvoltator: Dorin Ciobanu</string>
+
+    <!-- Car Fields -->
+    <string name="brand_label">Marca</string>
+    <string name="brand_hint">ex: Toyota, BMW, Dacia</string>
+    <string name="model_label">Model</string>
+    <string name="model_hint">ex: Corolla, X5, Logan</string>
+    <string name="year_label">An fabricatie</string>
+    <string name="year_hint">ex: 2022</string>
+    <string name="price_per_day_label">Pret pe zi (lei)</string>
+    <string name="price_hint">ex: 150.00</string>
+    <string name="description_label">Descriere</string>
+    <string name="description_hint">Descrie masina pe scurt...</string>
+    <string name="availability_label">Disponibilitate</string>
+    <string name="toggle_available_on">DISPONIBILA</string>
+    <string name="toggle_available_off">INDISPONIBILA</string>
+    <string name="rating_label">Rating</string>
+    <string name="car_image">Imagine masina</string>
+    <string name="no_description">Fara descriere disponibila.</string>
+
+    <!-- Availability -->
+    <string name="available">Disponibil</string>
+    <string name="not_available">Indisponibil</string>
+    <string name="car_not_available">Aceasta masina nu este disponibila pentru inchiriere!</string>
+
+    <!-- Rental Fields -->
+    <string name="client_name_label">Nume client</string>
+    <string name="client_name_hint">ex: Ion Popescu</string>
+    <string name="client_phone_label">Telefon client</string>
+    <string name="client_phone_hint">ex: +40 700 123 456</string>
+    <string name="start_date_label">Data inceput</string>
+    <string name="end_date_label">Data sfarsit</string>
+    <string name="pickup_time_title">Ora ridicare</string>
+    <string name="pickup_time_label">Ora:</string>
+    <string name="time_not_selected">Ora neselectata</string>
+    <string name="pick_date">Alege data</string>
+    <string name="pick_time">Alege ora</string>
+    <string name="insurance_label">Asigurare</string>
+    <string name="with_insurance">Cu asigurare (+15 lei/zi)</string>
+    <string name="without_insurance">Fara asigurare</string>
+    <string name="extras_label">Optiuni suplimentare</string>
+    <string name="child_seat_option">Scaun pentru copil (+10 lei)</string>
+    <string name="gps_option">GPS (+5 lei)</string>
+    <string name="total_price_label">Total:</string>
+    <string name="total_price_placeholder">Calculez pretul...</string>
+    <string name="days">zile</string>
+    <string name="selected_car">Masina selectata:</string>
+    <string name="confirm_rent">Confirma inchirierea</string>
+    <string name="no_extras">Fara optiuni extra</string>
+    <string name="child_seat_label">Scaun copil</string>
+    <string name="gps_label">GPS</string>
+    <string name="status_label">Status</string>
+    <string name="yes">Da</string>
+    <string name="no">Nu</string>
+    <!-- Note: 'yes' and 'no' are used as display strings -->
+
+    <!-- Rentals Activity -->
+    <string name="search_rentals_hint">Cauta dupa client sau telefon</string>
+    <string name="no_rentals_found">Nu au fost gasite inchirieri.</string>
+    <string name="rental_details_title">Inchiriere</string>
+    <string name="mark_completed">Finalizeaza</string>
+    <string name="rental_completed">Inchirierea a fost finalizata.</string>
+    <string name="rental_count_label">Total inchirieri:</string>
+    <string name="clear_completed_title">Sterge finalizate</string>
+    <string name="clear_completed_message">Stergi toate inchirierile cu status finalizat?</string>
+    <string name="cleared_rentals">Au fost sterse %d inchirieri.</string>
+    <string name="menu_clear_completed">Sterge finalizate</string>
+
+    <!-- Dialogs -->
+    <string name="confirm_delete">Confirmare stergere</string>
+    <string name="delete_confirmation_message">Esti sigur ca vrei sa stergi acest element?</string>
+    <string name="delete_car_message">Stergi masina %s %s? Toate inchirierile asociate vor fi sterse!</string>
+    <string name="delete_rental_message">Stergi inchirierea clientului %s?</string>
+    <string name="delete">Sterge</string>
+    <string name="cancel">Anuleaza</string>
+    <string name="ok">OK</string>
+    <string name="yes_label">Da</string>
+    <string name="no_label">Nu</string>
+
+    <!-- Toast / Snackbar Messages -->
+    <string name="car_added_success">Masina a fost adaugata cu succes!</string>
+    <string name="car_updated_success">Masina a fost actualizata cu succes!</string>
+    <string name="car_deleted_success">Masina a fost stearsa.</string>
+    <string name="rental_success">Inchiriere confirmata pentru %s!</string>
+    <string name="rental_deleted_success">Inchirierea a fost stearsa.</string>
+    <string name="add_error">Eroare la adaugarea masinii.</string>
+    <string name="update_error">Eroare la actualizarea masinii.</string>
+    <string name="delete_error">Eroare la stergere.</string>
+    <string name="rental_error">Eroare la salvarea inchirierii.</string>
+    <string name="error_no_car">Eroare: masina negasita!</string>
+
+    <!-- Validation -->
+    <string name="field_required">Campul este obligatoriu</string>
+    <string name="invalid_year">An invalid (1900-2100)</string>
+    <string name="invalid_price">Pret invalid (trebuie > 0)</string>
+    <string name="select_start_date">Selecteaza data de inceput</string>
+    <string name="select_end_date">Selecteaza data de sfarsit</string>
+    <string name="invalid_date_range">Data de sfarsit trebuie sa fie dupa data de inceput</string>
+</resources>

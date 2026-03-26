@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <!-- Car Image -->
+            <ImageView
+                android:id="@+id/ivCarImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/car_placeholder"
+                android:tint="@color/colorPrimary"
+                android:contentDescription="@string/car_image"
+                android:layout_marginBottom="@dimen/spacing_large" />
+
+            <!-- Brand -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <EditText
+                android:id="@+id/etBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/brand_hint"
+                android:inputType="textCapWords"
+                android:background="@drawable/rounded_button"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+
+            <!-- Model -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/model_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <EditText
+                android:id="@+id/etModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/model_hint"
+                android:inputType="textCapWords"
+                android:background="@drawable/rounded_button"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+
+            <!-- Year -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/year_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <EditText
+                android:id="@+id/etYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/year_hint"
+                android:inputType="number"
+                android:background="@drawable/rounded_button"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+
+            <!-- Price per day -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/price_per_day_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <EditText
+                android:id="@+id/etPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/price_hint"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rounded_button"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description_hint"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:maxLines="5"
+                android:gravity="top|start"
+                android:background="@drawable/rounded_button"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+
+            <!-- Availability ToggleButton -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/availability_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <ToggleButton
+                android:id="@+id/toggleAvailable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textOn="@string/toggle_available_on"
+                android:textOff="@string/toggle_available_off"
+                android:checked="true"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+
+            <!-- Rating SeekBar -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rating_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <TextView
+                android:id="@+id/tvRatingValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3/5  ★★★☆☆"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/star_color"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/spacing_small" />
+
+            <SeekBar
+                android:id="@+id/seekBarRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="4"
+                android:progress="2"
+                android:progressTint="@color/colorPrimary"
+                android:thumbTint="@color/colorAccent"
+                android:layout_marginBottom="@dimen/spacing_large" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save_car"
+                android:background="@drawable/primary_button_bg"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_large" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

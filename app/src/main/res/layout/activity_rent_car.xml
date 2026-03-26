@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <!-- Car Info Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                android:layout_marginBottom="@dimen/spacing_large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/selected_car"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:alpha="0.8" />
+
+                    <TextView
+                        android:id="@+id/tvCarInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Brand Model (Year)"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/spacing_tiny" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Client Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/client_name_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <EditText
+                android:id="@+id/etClientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/client_name_hint"
+                android:inputType="textPersonName|textCapWords"
+                android:background="@drawable/rounded_button"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+
+            <!-- Client Phone -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/client_phone_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <EditText
+                android:id="@+id/etClientPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/client_phone_hint"
+                android:inputType="phone"
+                android:background="@drawable/rounded_button"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+
+            <!-- Start Date -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_date_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="--/--/----"
+                    android:textSize="@dimen/text_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/spacing_small" />
+
+                <Button
+                    android:id="@+id/btnPickStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pick_date"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/spacing_small" />
+
+            </LinearLayout>
+
+            <!-- End Date -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/end_date_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <TextView
+                    android:id="@+id/tvEndDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="--/--/----"
+                    android:textSize="@dimen/text_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/spacing_small" />
+
+                <Button
+                    android:id="@+id/btnPickEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pick_date"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/spacing_small" />
+
+            </LinearLayout>
+
+            <!-- Pickup Time -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pickup_time_title"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <TextView
+                    android:id="@+id/tvPickupTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/time_not_selected"
+                    android:textSize="@dimen/text_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/spacing_small" />
+
+                <Button
+                    android:id="@+id/btnPickTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pick_time"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/spacing_small" />
+
+            </LinearLayout>
+
+            <!-- Insurance RadioGroup -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/insurance_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupInsurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <RadioButton
+                    android:id="@+id/rbWithInsurance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/with_insurance"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/colorPrimary" />
+
+                <RadioButton
+                    android:id="@+id/rbWithoutInsurance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/without_insurance"
+                    android:checked="true"
+                    android:textColor="@color/text_primary"
+                    android:buttonTint="@color/colorPrimary" />
+
+            </RadioGroup>
+
+            <!-- Extras Checkboxes -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/extras_label"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <CheckBox
+                android:id="@+id/cbChildSeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/child_seat_option"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/colorPrimary"
+                android:layout_marginBottom="@dimen/spacing_tiny" />
+
+            <CheckBox
+                android:id="@+id/cbGPS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gps_option"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/colorPrimary"
+                android:layout_marginBottom="@dimen/spacing_medium" />
+
+            <!-- Total Price -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <TextView
+                    android:id="@+id/tvTotalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_price_placeholder"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_medium" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Rent Button -->
+            <Button
+                android:id="@+id/btnRent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm_rent"
+                android:background="@color/colorAccent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_large" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_medium"
+    android:layout_marginEnd="@dimen/spacing_medium"
+    android:layout_marginTop="@dimen/spacing_small"
+    android:layout_marginBottom="@dimen/spacing_small"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/spacing_small">
+
+            <!-- Rental ID -->
+            <TextView
+                android:id="@+id/tvRentalId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#1"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/text_secondary"
+                android:background="@color/icon_background"
+                android:padding="4dp" />
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+            <!-- Status -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACTIV"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Client Name -->
+        <TextView
+            android:id="@+id/tvClientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Client Name"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="@dimen/spacing_tiny" />
+
+        <!-- Client Phone -->
+        <TextView
+            android:id="@+id/tvClientPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+40 700 000 000"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="@dimen/spacing_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginBottom="@dimen/spacing_small" />
+
+        <!-- Dates Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/spacing_small">
+
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start: 01/01/2024"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="End: 05/01/2024"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/text_secondary"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+        <!-- Extras and Price Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvExtras"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GPS, Asigurare"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500.00 lei"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

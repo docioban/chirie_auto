@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Hero Image -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorPrimaryDark">
+
+                <ImageView
+                    android:id="@+id/ivCarImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/car_placeholder"
+                    android:tint="@color/white"
+                    android:contentDescription="@string/car_image" />
+
+            </LinearLayout>
+
+            <!-- Availability Badge -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/spacing_medium"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tvAvailability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/available"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:padding="@dimen/spacing_small" />
+
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvStars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="★★★★☆"
+                    android:textColor="@color/star_color"
+                    android:textSize="@dimen/text_large" />
+
+            </LinearLayout>
+
+            <!-- Car Details Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                android:layout_margin="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_large">
+
+                    <!-- Brand -->
+                    <TextView
+                        android:id="@+id/tvBrand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Brand"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary" />
+
+                    <!-- Model -->
+                    <TextView
+                        android:id="@+id/tvModel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Model"
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="@dimen/spacing_medium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color"
+                        android:layout_marginBottom="@dimen/spacing_medium" />
+
+                    <!-- Year Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/spacing_small">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/year_label"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/text_small" />
+
+                        <TextView
+                            android:id="@+id/tvYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2023"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_medium" />
+
+                    </LinearLayout>
+
+                    <!-- Price Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/spacing_small">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/price_per_day_label"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/text_small" />
+
+                        <TextView
+                            android:id="@+id/tvPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100 lei/zi"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_large" />
+
+                    </LinearLayout>
+
+                    <!-- Rating Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/spacing_small">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/rating_label"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/text_small" />
+
+                        <TextView
+                            android:id="@+id/tvRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5 / 5.0"
+                            android:textColor="@color/star_color"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_medium" />
+
+                    </LinearLayout>
+
+                    <!-- Rental Count -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/rental_count_label"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/text_small" />
+
+                        <TextView
+                            android:id="@+id/tvRentalCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_medium" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color"
+                        android:layout_marginBottom="@dimen/spacing_medium" />
+
+                    <!-- Description -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description_label"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_small"
+                        android:layout_marginBottom="@dimen/spacing_tiny" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description text here"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_medium"
+                        android:lineSpacingMultiplier="1.3" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_large">
+
+                <Button
+                    android:id="@+id/btnEditCar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/edit_car"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/spacing_small" />
+
+                <Button
+                    android:id="@+id/btnRentCar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/rent_car"
+                    android:background="@color/colorAccent"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/spacing_small" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

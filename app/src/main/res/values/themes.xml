@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.InchirieriMasini" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorSecondaryVariant">@color/colorAccentDark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <!-- Customize your theme here -->
+        <item name="android:windowBackground">@color/background_color</item>
+        <item name="cardViewStyle">@style/AppCardView</item>
+        <item name="materialButtonStyle">@style/AppButton</item>
+    </style>
+
+    <style name="Theme.InchirieriMasini.NoActionBar" parent="Theme.InchirieriMasini">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardBackgroundColor">@color/card_background</item>
+    </style>
+
+    <style name="AppButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogPositiveButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogNegativeButton</item>
+    </style>
+
+    <style name="DialogPositiveButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="DialogNegativeButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+</resources>
